@@ -1,18 +1,60 @@
-## Getting Started
+# Práctica de Estructuras de Datos
+## Stack y Queue en Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Nicolas Cornejo
 
-## Folder Structure
+## Ejercicio 01: Validación de Signos
 
-The workspace contains two folders by default, where:
+### Descripción
+Se verifica si una cadena que contiene los símbolos (), {}, [] está correctamente balanceada.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Solución
+Se utiliza un Stack:
+- Los símbolos de apertura se insertan en el stack
+- Al encontrar un cierre, se compara con el último símbolo de apertura
+- Si no coinciden o el stack está vacío, la cadena es inválida
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Ejemplo de salida
+Cadena: {[()]} es válida? true  
+Cadena: {[(])} es válida? false  
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+---
 
-## Dependency Management
+## Ejercicio 02: Ordenar un Stack
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Descripción
+Se ordena un Stack de enteros dejando el elemento más pequeño en el tope.
+
+### Solución
+- Se utiliza un Stack auxiliar
+- Se reinsertan los elementos respetando el orden
+- No se usan arreglos ni listas
+
+### Ejemplo de salida
+Stack original: [5, 1, 4, 2]  
+Stack ordenado: [1, 2, 4, 5]  
+
+---
+
+## Ejercicio 03: Palíndromo usando Colas
+
+### Descripción
+Se determina si una palabra es palíndroma usando colas.
+
+### Solución
+- Se insertan los caracteres en una cola original
+- Se invierte usando una cola auxiliar
+- Se comparan ambas colas elemento por elemento
+
+### Ejemplo de salida
+"ana" → true  
+"radar" → true  
+"java" → false  
+
+---
+
+## Evidencias
+Ejecuciones en Java
+![alt text](assets/Java.png)
+Ejecucion en Python
+![alt text](assets/Python.png)
